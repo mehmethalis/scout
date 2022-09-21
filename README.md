@@ -1,2 +1,2 @@
-# scout
-Capabilities bring candidates from github
+# scout - API
+Reach talented people more easily in recruiting 
