@@ -16,9 +16,9 @@ services:
              python manage.py runserver 0.0.0.0:8000"
     environment:
       - DB_HOST=db
-      - DB_NAME=${POSTGRES_DB}
-      - DB_USER=${POSTGRES_USER}
-      - DB_PASS=${POSTGRES_PASSWORD}
+      - DB_NAME=scout-db
+      - DB_USER=root
+      - DB_PASS=root
     depends_on:
       - db
 
@@ -27,9 +27,9 @@ services:
     volumes:
       - dev-db-data:/var/lib/postgresql/data
     environment:
-      - POSTGRES_DB=${POSTGRES_DB}
-      - POSTGRES_USER=${POSTGRES_USER}
-      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=scout-db
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
 
 volumes:
   dev-db-data:
