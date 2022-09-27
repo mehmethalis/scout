@@ -15,6 +15,8 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Docker Compose Build
+        run: docker-compose build
       - name: Test
         run: docker-compose run --rm app sh -c "python manage.py wait_db && python manage.py test"
       - name: Lint
